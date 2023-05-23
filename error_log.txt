@@ -1,0 +1,60 @@
+loop_1.c: In function ‘loop’:
+loop_1.c:49:1: error: implicit declaration of function ‘loop3’; did you mean ‘loop_3’? [-Werror=implicit-function-declaration]
+   49 | loop3(s, gline, buff, string, copy);
+      | ^~~~~
+      | loop_3
+cc1: all warnings being treated as errors
+parse_tokens.c: In function ‘parse’:
+parse_tokens.c:32:1: error: ‘copy’ undeclared (first use in this function); did you mean ‘bcopy’?
+   32 | copy = NULL;
+      | ^~~~
+      | bcopy
+parse_tokens.c:32:1: note: each undeclared identifier is reported only once for each function it appears in
+string_1.c: In function ‘_strdup’:
+string_1.c:52:9: error: ‘y’ undeclared (first use in this function)
+   52 | return (y);
+      |         ^
+string_1.c:52:9: note: each undeclared identifier is reported only once for each function it appears in
+string_1.c:53:1: error: control reaches end of non-void function [-Werror=return-type]
+   53 | }
+      | ^
+cc1: all warnings being treated as errors
+string_2.c: In function ‘str_concat’:
+string_2.c:40:1: error: ‘y’ undeclared (first use in this function)
+   40 | y[_strlen(s1) + _strlen(s2)] = '\0';
+      | ^
+string_2.c:40:1: note: each undeclared identifier is reported only once for each function it appears in
+string_2.c:43:1: error: control reaches end of non-void function [-Werror=return-type]
+   43 | }
+      | ^
+cc1: all warnings being treated as errors
+@EbrahimM78 ➜ /workspaces/simple_shell (main) $ gcc -Wall -Werror -Wextra -pedantic *.c -o shell >> error_log.txt
+loop_1.c: In function ‘loop’:
+loop_1.c:49:1: error: implicit declaration of function ‘loop3’; did you mean ‘loop_3’? [-Werror=implicit-function-declaration]
+   49 | loop3(s, gline, buff, string, copy);
+      | ^~~~~
+      | loop_3
+cc1: all warnings being treated as errors
+parse_tokens.c: In function ‘parse’:
+parse_tokens.c:32:1: error: ‘copy’ undeclared (first use in this function); did you mean ‘bcopy’?
+   32 | copy = NULL;
+      | ^~~~
+      | bcopy
+parse_tokens.c:32:1: note: each undeclared identifier is reported only once for each function it appears in
+string_1.c: In function ‘_strdup’:
+string_1.c:52:9: error: ‘y’ undeclared (first use in this function)
+   52 | return (y);
+      |         ^
+string_1.c:52:9: note: each undeclared identifier is reported only once for each function it appears in
+string_1.c:53:1: error: control reaches end of non-void function [-Werror=return-type]
+   53 | }
+      | ^
+cc1: all warnings being treated as errors
+string_2.c: In function ‘str_concat’:
+string_2.c:40:1: error: ‘y’ undeclared (first use in this function)
+   40 | y[_strlen(s1) + _strlen(s2)] = '\0';
+      | ^
+string_2.c:40:1: note: each undeclared identifier is reported only once for each function it appears in
+string_2.c:43:1: error: control reaches end of non-void function [-Werror=return-type]
+   43 | }
+      | ^
